@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles.scss";
 import { List } from "../../components";
 import { useParams } from "react-router-dom";
 
 export default function Products() {
   const params = useParams();
-  console.log(params);
+  const catId = parseInt(params.id);
+
+  const [maxPrice, setMaxPrice] = useState(1000);
+  const [sortBy, setSortBy] = useState(null);
 
   return (
     <div className="products">
@@ -14,18 +17,37 @@ export default function Products() {
           <h4>Filtrar por preço</h4>
           <div className="filterByPrice">
             <span>0</span>
-            <input type="range" name="filter" max={120} min={0} id="filter" />
-            <span>120</span>
+            <input
+              type="range"
+              onChange={(e) => setMaxPrice(e.target.value)}
+              name="filter"
+              max={120}
+              min={0}
+              id="filter"
+            />
+            <span>{maxPrice}</span>
           </div>
         </div>
         <div className="sortBy">
           <h4>Ordenar por:</h4>
           <div className="sort">
-            <input type="radio" value="asc" name="price" id="asc" />
+            <input
+              onChange={(e) => setSortBy("asc")}
+              type="radio"
+              value="asc"
+              name="price"
+              id="asc"
+            />
             <label htmlFor="asc">Menor Preço</label>
           </div>
           <div className="sort">
-            <input type="radio" value="desc" name="price" id="desc" />
+            <input
+              type="radio"
+              onChange={(e) => setSortBy("desc")}
+              value="desc"
+              name="price"
+              id="desc"
+            />
             <label htmlFor="desc">Maior Preço</label>
           </div>
         </div>
@@ -36,7 +58,7 @@ export default function Products() {
           alt=""
         />
         <div className="products-container">
-          <List />
+          <List catId={catId} maxPrice={maxPrice} sortBy={sortBy} />
         </div>
       </div>
     </div>

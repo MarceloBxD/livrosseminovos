@@ -33,6 +33,33 @@ export default function List() {
       oldPrice: 39,
       price: 32,
     },
+    {
+      id: 4,
+      img: "https://anacanosa.com.br/wp-content/uploads/livro_sexualidades_e_violencias_anacanosa.png",
+      img2: livro2,
+      title: "Título do livro",
+      isNew: false,
+      oldPrice: 39,
+      price: 32,
+    },
+    {
+      id: 5,
+      img: "https://anacanosa.com.br/wp-content/uploads/livro_sexualidades_e_violencias_anacanosa.png",
+      img2: livro2,
+      title: "Título do livro",
+      isNew: false,
+      oldPrice: 39,
+      price: 32,
+    },
+    {
+      id: 6,
+      img: "https://anacanosa.com.br/wp-content/uploads/livro_sexualidades_e_violencias_anacanosa.png",
+      img2: livro2,
+      title: "Título do livro",
+      isNew: false,
+      oldPrice: 39,
+      price: 32,
+    },
   ];
 
   return (

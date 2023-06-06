@@ -10,7 +10,7 @@ export default function Contact() {
     <div className="contact">
       <div className="text">Entre em contato</div>
       <div className="inputArea">
-        <input type="text" placeholder="email" />
+        <input type="text" placeholder="Email" />
         <button>Join us</button>
       </div>
       <div className="mediaIcons">

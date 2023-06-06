@@ -13,8 +13,8 @@ export default function Card({ item }) {
         </div>
         <h2>{item.title}</h2>
         <div className="prices">
-          <h3>${item.oldPrice}</h3>
-          <h3>${item.price}</h3>
+          <h3>R${item.oldPrice},00</h3>
+          <h3>R${item.price},00</h3>
         </div>
       </div>
     </Link>
