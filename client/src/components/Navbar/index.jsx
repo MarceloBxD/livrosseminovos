@@ -33,11 +33,12 @@ export default function Navbar() {
           </div>
         ))}
       </div>
-      <div className="center">Livros seminovos</div>
+      <div className="center">SEMINOVOS</div>
       <div className="right">
         <div className="header-info">
           {headerInfo.map((info, index) => (
             <Link
+              key={index}
               style={{ textDecoration: "none", color: "#000" }}
               to={info.url}
             >

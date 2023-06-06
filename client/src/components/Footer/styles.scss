@@ -1,69 +1,91 @@
 .footer {
   padding: 0 50px;
-}
 
-.wrap {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 50px 0;
-}
-
-.top {
-  display: flex;
-
-  .left-footer {
-    flex: 2;
+  .top {
     display: flex;
-    gap: 100px;
+    margin-top: 120px;
 
-    .categories {
+    .left-footer {
+      flex: 2;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      margin-bottom: 30px;
+      gap: 100px;
 
-      .category {
-        font-size: 14px;
-        color: #555;
-        margin-bottom: 10px;
-        cursor: pointer;
+      .categories {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-bottom: 30px;
+
+        .category {
+          font-size: 14px;
+          color: #555;
+          margin-bottom: 10px;
+          cursor: pointer;
+        }
+
+        .title {
+          font-size: 20px;
+          font-weight: 700;
+          color: #444;
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    .right-footer {
+      display: flex;
+      flex: 3;
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
       }
 
       .title {
         font-size: 20px;
         font-weight: 700;
         color: #444;
-        margin-bottom: 20px;
+      }
+
+      .description {
+        font-size: 14px;
+        color: #555;
+        margin-top: 20px;
+        max-width: 350px;
+        text-align: left;
+
+        margin-bottom: 30px;
       }
     }
   }
+  .bottom {
+    margin-top: 80px;
 
-  .right-footer {
-    display: flex;
-    flex: 3;
-
-    .content {
+    .editoras {
       display: flex;
-      flex-direction: column;
       justify-content: center;
-    }
-
-    .title {
-      font-size: 20px;
-      font-weight: 700;
-      color: #444;
-    }
-
-    .description {
-      font-size: 14px;
-      color: #555;
-      margin-top: 20px;
-      max-width: 350px;
-      text-align: left;
-
+      align-items: center;
       margin-bottom: 30px;
+      gap: 120px;
+
+      img {
+        object-fit: cover;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+      }
+
+      .editora {
+        width: 100%;
+        max-width: 200px;
+
+        font-size: 14px;
+        color: #555;
+        margin-bottom: 20px;
+        cursor: pointer;
+      }
     }
   }
 }

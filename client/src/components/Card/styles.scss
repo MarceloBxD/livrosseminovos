@@ -1,0 +1,40 @@
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .image {
+    width: 100%;
+    height: 270px;
+    overflow: hidden;
+    position: relative;
+
+    &:hover {
+      .secondImg {
+        z-index: 2;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+    }
+
+    .mainImg {
+      z-index: 1;
+    }
+  }
+  .prices {
+    h3:first-child {
+      text-decoration: line-through;
+    }
+  }
+}

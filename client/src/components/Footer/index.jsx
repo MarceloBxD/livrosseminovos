@@ -2,9 +2,24 @@ import React from "react";
 import "./styles.scss";
 
 export default function Footer() {
+  const editoras = [
+    {
+      id: 1,
+      name: "Moderna",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqkxKidEh3BvSELvqJUjcP2KEb4nmoYVBoDQ&usqp=CAU",
+    },
+
+    {
+      id: 3,
+      name: "Ubem",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfvSuRk_-4x8LC4w1SLxID85hXvD2lzukJCA&usqp=CAU",
+    },
+  ];
+
   return (
     <div className="footer">
-      <div className="wrap">© 2021 All rights reserved.</div>
       <div className="top">
         <div className="left-footer">
           <div className="categories">
@@ -45,7 +60,16 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="bottom"></div>
+      <div className="bottom">
+        <div className="editoras">
+          {editoras.map((editora) => (
+            <div className="editora" key={editora.id}>
+              <img src={editora.image} alt={editora.name} />
+            </div>
+          ))}
+        </div>
+        <div className="wrap">© 2021 All rights reserved.</div>
+      </div>
     </div>
   );
 }
