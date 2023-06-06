@@ -1,11 +1,10 @@
-import { Card } from "../../components";
 import React from "react";
-import "./styles.scss";
-
-import imglivro from "../../../public/images/imglivro.png";
+import { Card } from "../index";
 import livro2 from "../../../public/images/livro2.png";
 
-export default function TypeProducts({ type }) {
+import "./styles.scss";
+
+export default function List() {
   const data = [
     {
       id: 1,
@@ -37,22 +36,10 @@ export default function TypeProducts({ type }) {
   ];
 
   return (
-    <div className="typeProducts">
-      <div className="top">
-        <h1>Produtos {type}</h1>
-        <p>
-          {/* texto será alterado com o uso do strapi */}
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam
-          debitis, quia fuga esse quo nam, fugiat similique enim eaque, quis
-          rem. Suscipit esse corporis est neque, dignissimos in commodi
-          veritatis?
-        </p>
-      </div>
-      <div className="bottom">
-        {data.map((item) => (
-          <Card item={item} key={item.id} />
-        ))}
-      </div>
+    <div className="list">
+      {data?.map((item) => (
+        <Card item={item} key={item.id} />
+      ))}
     </div>
   );
 }

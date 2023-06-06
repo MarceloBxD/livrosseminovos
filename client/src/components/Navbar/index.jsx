@@ -5,15 +5,11 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import SearchIcon from "@mui/icons-material/Search";
 
 import "./styles.scss";
-import { Link } from "@mui/material";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const categories = ["Finanças", "Ficção", "No preçinho"];
   const headerInfo = [
-    {
-      url: "/",
-      title: "Homepage",
-    },
     {
       url: "/about",
       title: "Sobre",
@@ -33,7 +29,11 @@ export default function Navbar() {
           </div>
         ))}
       </div>
-      <div className="center">Biblioteca Particular</div>
+      <div className="center">
+        <Link className="link" to="/">
+          Biblioteca Particular
+        </Link>
+      </div>
       <div className="right">
         <div className="header-info">
           {headerInfo.map((info, index) => (
