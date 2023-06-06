@@ -7,6 +7,7 @@ export default function Card({ item }) {
     <Link className="link" to={`/products/${item.id}`}>
       <div className="card">
         <div className="image">
+          {item.isNew && <span>New</span>}
           <img src={item.img} alt="" className="mainImg" />
           <img src={item.img2} alt="" className="secondImg" />
         </div>
