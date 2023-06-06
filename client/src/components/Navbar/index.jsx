@@ -16,11 +16,11 @@ export default function Navbar() {
     },
     {
       url: "/about",
-      title: "About",
+      title: "Sobre",
     },
     {
       url: "/contact",
-      title: "Contact",
+      title: "Contate-nos",
     },
   ];
 
@@ -33,7 +33,7 @@ export default function Navbar() {
           </div>
         ))}
       </div>
-      <div className="center">SEMINOVOS</div>
+      <div className="center">Biblioteca Particular</div>
       <div className="right">
         <div className="header-info">
           {headerInfo.map((info, index) => (

@@ -1,6 +1,8 @@
 import React from "react";
 import "./styles.scss";
 
+import publiX from "../../../public/images/publiX.png";
+
 export default function Footer() {
   const editoras = [
     {
@@ -12,9 +14,8 @@ export default function Footer() {
 
     {
       id: 3,
-      name: "Ubem",
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfvSuRk_-4x8LC4w1SLxID85hXvD2lzukJCA&usqp=CAU",
+      name: "publiX",
+      image: publiX,
     },
   ];
 
@@ -31,7 +32,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="categories">
-            <div className="title">Categories</div>
+            <div className="title">Estilos</div>
             <div className="content">
               <div className="category">Finanças</div>
               <div className="category">Ficção</div>
@@ -62,13 +63,15 @@ export default function Footer() {
       </div>
       <div className="bottom">
         <div className="editoras">
-          {editoras.map((editora) => (
-            <div className="editora" key={editora.id}>
-              <img src={editora.image} alt={editora.name} />
-            </div>
-          ))}
+          <div className="left">© 2023 All rights reserved.</div>
+          <div className="right">
+            {editoras.map((editora) => (
+              <div className="editora" key={editora.id}>
+                <img src={editora.image} alt={editora.name} />
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="wrap">© 2021 All rights reserved.</div>
       </div>
     </div>
   );

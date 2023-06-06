@@ -39,7 +39,7 @@ export default function TypeProducts({ type }) {
   return (
     <div className="typeProducts">
       <div className="top">
-        <h1>{type} products</h1>
+        <h1>Produtos {type}</h1>
         <p>
           {/* texto será alterado com o uso do strapi */}
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam
