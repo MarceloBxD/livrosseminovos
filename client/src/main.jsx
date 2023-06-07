@@ -8,6 +8,7 @@ import Home from "./pages/Home/index.jsx";
 import Products from "./pages/Products/index.jsx";
 
 import { Footer, Navbar } from "./components";
+import { AppProvider } from "./contexts/ContextApi.jsx";
 
 // Criei um Layout para o App, para que o Navbar e o Footer sejam renderizados em todas as páginas
 const Layout = () => {
@@ -43,6 +44,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AppProvider>
+      <RouterProvider router={router} />
+    </AppProvider>
   </React.StrictMode>
 );
