@@ -21,6 +21,10 @@
         display: flex;
         gap: 5px;
       }
+
+      @media (max-width: 768px) {
+        display: none;
+      }
     }
 
     .sortBy {
@@ -33,6 +37,10 @@
       .sort {
         display: flex;
         gap: 5px;
+      }
+
+      @media (max-width: 768px) {
+        display: none;
       }
     }
   }

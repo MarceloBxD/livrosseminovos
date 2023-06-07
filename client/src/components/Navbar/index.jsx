@@ -36,7 +36,7 @@ export default function Navbar() {
       </div>
       <div className="center">
         <Link className="link" to="/">
-          Biblioteca Particular
+          Recicle Livros
         </Link>
       </div>
       <div className="right">
