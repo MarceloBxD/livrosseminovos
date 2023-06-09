@@ -67,7 +67,7 @@
     "Type": {
       "type": "enumeration",
       "enum": [
-        "Mais vendidos",
+        "Em conta",
         "Novos"
       ]
     }

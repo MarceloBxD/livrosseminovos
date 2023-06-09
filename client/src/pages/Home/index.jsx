@@ -7,7 +7,6 @@ export default function Home() {
   return (
     <div className="home">
       <Swiper />
-      <TypeProducts type="mais vendidos" />
       <TypeProducts type="Novos" />
       <Contact />
     </div>
