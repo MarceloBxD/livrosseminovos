@@ -8,22 +8,7 @@
   justify-content: space-between;
   align-items: center;
 
-  .left-navbar {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
-
-    .category {
-      cursor: pointer;
-    }
-
-    @media (max-width: 920px) {
-      display: none;
-    }
-  }
-  .center {
+  .logo {
     font-size: 30px;
     font-weight: 500;
 

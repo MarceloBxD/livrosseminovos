@@ -1,56 +1,23 @@
-import { Card } from "../../components";
-import React from "react";
 import "./styles.scss";
+import React from "react";
 
-import imglivro from "../../../public/images/imglivro.png";
-import livro2 from "../../../public/images/livro2.png";
+import { Card } from "../../components";
+import { useApp } from "../../contexts/ContextApi";
 
 export default function TypeProducts({ type }) {
-  const data = [
-    {
-      id: 1,
-      img: "https://anacanosa.com.br/wp-content/uploads/livro_sexualidades_e_violencias_anacanosa.png",
-      img2: livro2,
-      title: "Título do livro",
-      isNew: true,
-      oldPrice: 39,
-      price: 32,
-    },
-    {
-      id: 2,
-      img: "https://anacanosa.com.br/wp-content/uploads/livro_sexualidades_e_violencias_anacanosa.png",
-      img2: livro2,
-      title: "Título do livro",
-      isNew: true,
-      oldPrice: 39,
-      price: 32,
-    },
-    {
-      id: 3,
-      img: "https://anacanosa.com.br/wp-content/uploads/livro_sexualidades_e_violencias_anacanosa.png",
-      img2: livro2,
-      title: "Título do livro",
-      isNew: false,
-      oldPrice: 39,
-      price: 32,
-    },
-  ];
-
+  const { products } = useApp();
   return (
     <div className="typeProducts">
       <div className="top">
         <h1>Produtos {type}</h1>
         <p>
-          {/* texto será alterado com o uso do strapi */}
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam
-          debitis, quia fuga esse quo nam, fugiat similique enim eaque, quis
-          rem. Suscipit esse corporis est neque, dignissimos in commodi
-          veritatis?
+          Produtos usados por somente uma pessoa, espero que goste dos livros,
+          com certeza irá gostar da qualidade do nosso serviço!
         </p>
       </div>
       <div className="bottom">
-        {data.map((item) => (
-          <Card item={item} key={item.id} />
+        {products.map((item, index) => (
+          <Card item={item} key={index} />
         ))}
       </div>
     </div>

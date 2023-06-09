@@ -32,31 +32,30 @@ export default function Footer() {
             </div>
           </div>
           <div className="categories">
-            <div className="title">Estilos</div>
+            <div className="title">Subcategorias</div>
             <div className="content">
-              <div className="category">Finanças</div>
-              <div className="category">Ficção</div>
-              <div className="category">No preçinho</div>
+              <div className="category">Crianças</div>
+              <div className="category">Investidores</div>
+              <div className="category">Adolescentes</div>
             </div>
           </div>
         </div>
         <div className="right-footer">
           <div className="content">
-            <div className="title">About</div>
+            <div className="title">Sobre Nós</div>
             <div className="description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-              voluptatum, voluptate, quibusdam, quia voluptas quod quos
-              voluptatibus quae doloribus quidem repellendus? Quisquam
-              voluptatum,
+              Pensamos em criar esse site com o inuito de trocar os livros já
+              lidos por outros que ainda não lemos, assim economizamos e
+              conseguimos oferecer um preço mais acessível para todos.
             </div>
           </div>
           <div className="content">
-            <div className="title">About</div>
+            <div className="title">Recicle Livros</div>
             <div className="description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-              voluptatum, voluptate, quibusdam, quia voluptas quod quos
-              voluptatibus quae doloribus quidem repellendus? Quisquam
-              voluptatum,
+              Possivelmente vocês possuem livros em casas no qual querem se
+              livrar, porém não sabe como. Estamos trabalhando para que você
+              possa juntar ele nesse site e consiga ajudar pessoas a lerem por
+              um preço mais amigável.
             </div>
           </div>
         </div>
