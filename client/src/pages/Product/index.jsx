@@ -4,13 +4,24 @@ import { useApp } from "../../contexts/ContextApi";
 
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import img from "../../../public/images/image2.jpg";
+import { useParams } from "react-router-dom";
+import { useFetch } from "../../hooks/useFetch";
 
 export default function Product() {
+  const id = useParams().id;
+  const { products, error } = useFetch(`/produtos/${id}?populate=*`);
+  console.log(products?.attributes?.imagem1?.data?.attributes?.url);
+
   const { cartQuantity, setCartQuantity, setOpen } = useApp();
   const [selectedImg, setSelectedImg] = useState(0);
   const [quantity, setQuantity] = useState(1);
   const [price, setPrice] = useState(33.99);
-  const images = [img, img];
+  const images = [
+    "http://localhost:1337" +
+      products?.attributes?.imagem1?.data?.attributes?.url,
+    "http://localhost:1337" +
+      products?.attributes?.imagem2?.data?.attributes?.url,
+  ];
 
   return (
     <div className="product">
@@ -25,14 +36,9 @@ export default function Product() {
       </div>
       <div className="right">
         <div className="infos">
-          <h1>Lord of Rings</h1>
-          <h3>R$ {(price * quantity).toFixed(2)}</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga
-            ullam, qui commodi voluptatum repellendus quae totam suscipit
-            facilis placeat quis neque ratione harum quo tempore eveniet
-            doloremque, earum vitae eius.
-          </p>
+          <h1>{products?.attributes?.titulo}</h1>
+          <h3>R$ {products?.attributes?.preco * quantity}</h3>
+          <p>{products?.attributes?.resumo}</p>
           <div className="quantity">
             <button
               onClick={() => setQuantity(quantity === 1 ? 1 : quantity - 1)}

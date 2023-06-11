@@ -49,27 +49,8 @@
       "type": "boolean",
       "default": false
     },
-    "categorias": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::categoria.categoria",
-      "inversedBy": "produtos"
-    },
-    "sub_categorias": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::sub-categoria.sub-categoria",
-      "inversedBy": "produtos"
-    },
     "numPaginas": {
       "type": "integer"
-    },
-    "Type": {
-      "type": "enumeration",
-      "enum": [
-        "Em conta",
-        "Novos"
-      ]
     }
   }
 }

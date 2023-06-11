@@ -11,7 +11,6 @@ export default function Contact() {
   return (
     <div className="contact">
       <div className="text">Entre em contato</div>
-
       <div className="mediaIcons">
         <Link
           className="link"
