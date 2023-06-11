@@ -87,9 +87,11 @@
       align-items: center;
       gap: 10px;
       background-color: #006eff;
+      transition: all 0.3s ease-in;
 
       &:hover {
         cursor: pointer;
+        background-color: #0052cc;
       }
     }
   }

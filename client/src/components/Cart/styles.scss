@@ -57,6 +57,13 @@
       margin-top: 20px;
       cursor: pointer;
       margin-bottom: 50px;
+      transition: all 0.3s ease-in;
+
+      &:hover {
+        background-color: #fff;
+        color: #006eff;
+        border: 1px solid #006eff;
+      }
     }
 
     .reset {

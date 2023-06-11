@@ -2,7 +2,6 @@ import React from "react";
 import "./styles.scss";
 
 import { useApp } from "../../contexts/ContextApi";
-import { useFetch } from "../../hooks/useFetch";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 
 export default function Cart() {
@@ -11,15 +10,13 @@ export default function Cart() {
 
   const handleDelete = (id) => {
     const newCart = cartItems.filter((item) => item.id !== id);
-    setCartQuantity(cartQuantity > 0 ? cartQuantity - 1 : 0);
     setCartItems(newCart);
+    setCartQuantity(cartQuantity - 1);
   };
 
   const totalPrice = cartItems
     .map((item) => item.price * item.quantity)
     .reduce((a, b) => a + b, 0);
-
-  console.log(totalPrice);
 
   return (
     <div className="cart">
@@ -36,7 +33,7 @@ export default function Cart() {
               </div>
             </div>
             <DeleteOutlineIcon
-              onClick={(id) => handleDelete(id)}
+              onClick={() => handleDelete(item.id)}
               className="delete"
             />
           </div>
