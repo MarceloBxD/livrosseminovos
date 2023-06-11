@@ -15,7 +15,7 @@ export default function Cart() {
   const handleDelete = (id) => {
     const newCart = cartItems.filter((item) => item.id !== id);
     setCartItems(newCart);
-    setCartQuantity(cartQuantity - 1);
+    setCartQuantity(cartQuantity == 1 ? 0 : cartQuantity - 1);
   };
 
   const stripePromise = loadStripe(
@@ -64,7 +64,7 @@ export default function Cart() {
           "Carrinho vazio"
         ) : (
           <div className="total">
-            <h3>Subtotal: R$ {totalPrice}</h3>
+            <h3>Subtotal: R$ {totalPrice.toFixed(2)}</h3>
             <button onClick={() => handlePayment()}>Finalizar compra</button>
             <p
               className="reset"

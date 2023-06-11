@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 import Cart from "../Cart";
 
 export default function Navbar() {
-  const { cartQuantity, open, setOpen } = useApp();
+  const { cartQuantity, open, setOpen, cartItems } = useApp();
 
   return (
     <div className="navbar-container">
@@ -25,7 +25,7 @@ export default function Navbar() {
         <SearchIcon style={{ cursor: "pointer" }} />
         <div className="cartIcon" onClick={() => setOpen(!open)}>
           <ShoppingCartIcon />
-          <span className="span">{cartQuantity}</span>
+          <span className="span">{cartItems.length}</span>
         </div>
       </div>
       {open && <Cart />}
