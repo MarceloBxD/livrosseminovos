@@ -1,11 +1,12 @@
 .contact {
   background-color: #006eff;
   height: 60px;
+  width: 100%;
+  max-width: 100vw;
+  padding: 0 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 150px;
-  padding-right: 150px;
 
   .text {
     color: white;

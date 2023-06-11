@@ -1,6 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
+
+// Stripe
+import { Elements } from "@stripe/react-stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
 
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Product from "./pages/Product/index.jsx";
@@ -20,6 +23,10 @@ const Layout = () => {
     </div>
   );
 };
+
+const stripePromise = loadStripe(
+  "pk_live_51N80DtJDY5lruH3Ne9l3D4Lnm2I8dkO0rzad7EbQw7spSrhWBzxtWj02qoEgJ9QJaoYzzJHM0oCn0n1J0g4u1HlL00of0o51i3"
+);
 
 const router = createBrowserRouter([
   {
@@ -45,7 +52,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <AppProvider>
-      <RouterProvider router={router} />
+      <Elements stripe={stripePromise}>
+        <RouterProvider router={router} />
+      </Elements>
     </AppProvider>
   </React.StrictMode>
 );
