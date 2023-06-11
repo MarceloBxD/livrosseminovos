@@ -2,12 +2,13 @@
   width: 100%;
   max-width: 100vw;
   display: flex;
-  gap: 10px;
+  gap: 20px;
   margin-top: 30px;
   margin-bottom: 50px;
 
   .flexItem {
     width: 100%;
+    padding: 0 30px;
     height: 100%;
     position: relative;
     overflow: hidden;
@@ -28,7 +29,7 @@
       object-fit: cover;
       opacity: 0.8;
       transition: all 0.3s ease-in;
-      filter: blur(2px);
+      filter: blur(1px);
 
       &:hover {
         cursor: pointer;
@@ -41,7 +42,7 @@
       left: 50%;
       color: #fff;
       transform: translate(-50%, -50%);
-      background-color: #006eff;
+      background-color: #0056b3;
       border: none;
       font-size: 1.2rem;
       border-radius: 10px;
@@ -52,7 +53,7 @@
       cursor: pointer;
 
       &:hover {
-        background-color: #0056b3;
+        opacity: 0.9;
       }
     }
   }
