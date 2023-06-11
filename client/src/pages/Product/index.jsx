@@ -21,8 +21,6 @@ export default function Product() {
   } = useApp();
   const { products } = useFetch(`/produtos/${id}?populate=*`);
 
-  console.log(products);
-
   const handleAddToCart = () => {
     setCartQuantity(cartQuantity + 1);
     setOpen(true);
@@ -98,7 +96,7 @@ export default function Product() {
         </div>
         <div className="basicsDescs">
           <p>
-            Páginas: <span>{products?.attributes?.numPaginas}</span>
+            <span>{products?.attributes?.numPaginas}</span> páginas
           </p>
         </div>
       </div>
