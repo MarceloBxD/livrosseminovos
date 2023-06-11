@@ -15,7 +15,6 @@ export function AppProvider({ children }) {
   const [open, setOpen] = useState(false);
   const [id, setId] = useState(0);
   const [quantity, setQuantity] = useState(1);
-
   const [cartItems, setCartItems] = useState([]);
 
   const value = {

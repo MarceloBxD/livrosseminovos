@@ -10,7 +10,11 @@ export default function TypeProducts({ type }) {
     <div className="typeProducts">
       <div className="top">
         <h1>Produtos {type}</h1>
-        <p>Aqui estão alguns produtos {type} que você pode gostar.</p>
+        <p>
+          Aqui estão alguns produtos que você pode gostar, esperamos que goste
+          de nossos produtos e que os mesmos possam abrir oportunidade pra
+          vocês.
+        </p>
       </div>
       <div className="bottom">
         {products.map((item, index) => (

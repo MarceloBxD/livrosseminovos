@@ -21,6 +21,8 @@ export default function Product() {
   } = useApp();
   const { products } = useFetch(`/produtos/${id}?populate=*`);
 
+  console.log(products);
+
   const handleAddToCart = () => {
     setCartQuantity(cartQuantity + 1);
     setOpen(true);
@@ -74,8 +76,8 @@ export default function Product() {
       <div className="right">
         <div className="infos">
           <h1>{products?.attributes?.titulo}</h1>
-          <h3>R$ {products?.attributes?.preco * quantity}</h3>
-          <p>{products?.attributes?.resumo}</p>
+          <h3>R$ {products?.attributes?.preco}</h3>
+          <p className="resume">{products?.attributes?.resumo}</p>
           <div className="quantity">
             <button
               onClick={() => setQuantity(quantity === 1 ? 1 : quantity - 1)}
@@ -93,6 +95,11 @@ export default function Product() {
             <AddShoppingCartIcon />
             Adicionar ao carrinho
           </button>
+        </div>
+        <div className="basicsDescs">
+          <p>
+            Páginas: <span>{products?.attributes?.numPaginas}</span>
+          </p>
         </div>
       </div>
     </div>

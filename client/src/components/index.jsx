@@ -5,4 +5,5 @@ export { default as Card } from "./Card";
 export { default as Contact } from "./Contact";
 export { default as List } from "./List";
 export { default as Cart } from "./Cart";
+export { default as FlexImages } from "./FlexImages";
 export { default as Swiper } from "./Swiper";
