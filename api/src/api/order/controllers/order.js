@@ -12,6 +12,7 @@ const { createCoreController } = require("@strapi/strapi").factories;
 module.exports = createCoreController("api::order.order", ({ strapi }) => ({
   async create(ctx) {
     const { products } = ctx.request.body;
+    console.log(products);
 
     // Caso de erro, há possibilidade de estar nessa parte do código (verificar vídeo)
     const lineItems = await Promise.all(
@@ -21,14 +22,18 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
           .findOne(produto.id);
 
         // Verificar a questão da quantidade, tirar o comentário pra ver se funcionará
+        const { preco, titulo } = item;
+
+        // console.log(produto.quantity, preco, titulo);
+
         return {
-          quantity: item.quantity,
+          quantity: produto.quantity,
           price_data: {
             currency: "BRL",
             product_data: {
-              name: item.titulo,
+              name: titulo,
             },
-            unit_amount: item.preco * 100,
+            unit_amount: preco * 100,
           },
         };
       })
@@ -43,6 +48,8 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
         shipping_address_collection: { allowed_countries: ["BR"] },
         payment_method_types: ["card"],
       });
+
+      console.log(session)
 
       await strapi.service("api::order:order").create({
         data: {

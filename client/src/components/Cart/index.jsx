@@ -21,6 +21,7 @@ export default function Cart() {
   const stripePromise = loadStripe(
     "pk_live_51N80DtJDY5lruH3Ne9l3D4Lnm2I8dkO0rzad7EbQw7spSrhWBzxtWj02qoEgJ9QJaoYzzJHM0oCn0n1J0g4u1HlL00of0o51i3"
   );
+
   // api stripe: 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
   const handlePayment = async () => {
     try {
@@ -28,6 +29,7 @@ export default function Cart() {
       const response = await makeRequest.post("/orders", {
         products: cartItems,
       });
+      console.log(response);
       await stripe.redirectToCheckout({
         sessionId: response.data.stripeSession.id,
       });

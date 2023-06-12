@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 import Cart from "../Cart";
 
 export default function Navbar() {
-  const { cartQuantity, open, setOpen, cartItems } = useApp();
+  const { open, setOpen, cartItems } = useApp();
 
   return (
     <div className="navbar-container">
