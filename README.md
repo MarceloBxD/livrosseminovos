@@ -25,17 +25,17 @@ Seguem algumas imagens do projeto para que possam dar uma olhada
 
 **É bom deixar claro que as imagens ainda estão mockadas para que o cliente consiga alterar tudo dentro do próprio strapi**
 
-![Logo do Markdown](public/mdImages/img1.png)
-![Logo do Markdown](public/mdImages/img2.png)
-![Logo do Markdown](public/mdImages/img6.png)
-![Logo do Markdown](public/mdImages/img3.png)
+![Imagem do Projeto](client/public/mdImages/img1.png)
+![Imagem do Projeto](client/public/mdImages/img2.png)
+![Imagem do Projeto](client/public/mdImages/img6.png)
+![Imagem do Projeto](client/public/mdImages/img3.png)
 
 > Quando somente um item está sendo adicionado ao carrinho
-> ![Logo do Markdown](public/mdImages/img4.png)
-> ![Logo do Markdown](public/mdImages/cartItem.png)
+> ![Item no carrinho](client/public/mdImages/img4.png)
+> ![Item no carrinho](client/public/mdImages/cartItem.png)
 
 > Quando mais de um item está adicionado ao carrinho
-> ![Logo do Markdown](public/mdImages/cartSum.png)
+> ![Item no carrinho](client/public/mdImages/cartSum.png)
 
 > CMS (strapi)
-> ![Logo do Markdown](public/mdImages/strapi.png)
+> ![Item no carrinho](client/public/mdImages/strapi.png)
