@@ -24,7 +24,7 @@ export default function Footer() {
       <div className="top">
         <div className="left-footer">
           <div className="categories">
-            <div className="title">Categories</div>
+            <div className="title">Categorias</div>
             <div className="content">
               <div className="category">Finanças</div>
               <div className="category">Ficção</div>
@@ -32,7 +32,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="categories">
-            <div className="title">Subcategorias</div>
+            <div className="title">Sub Categorias</div>
             <div className="content">
               <div className="category">Crianças</div>
               <div className="category">Investidores</div>
@@ -62,7 +62,7 @@ export default function Footer() {
       </div>
       <div className="bottom">
         <div className="editoras">
-          <div className="left">© 2023 All rights reserved.</div>
+          <div className="left">© 2023 Todos direitos reservados.</div>
           <div className="right">
             {editoras.map((editora) => (
               <div className="editora" key={editora.id}>

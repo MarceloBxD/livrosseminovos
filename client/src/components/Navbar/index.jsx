@@ -21,8 +21,8 @@ export default function Navbar() {
         </Link>
       </div>
       <div className="right">
-        <PersonIcon style={{ cursor: "pointer" }} />
         <SearchIcon style={{ cursor: "pointer" }} />
+        <PersonIcon style={{ cursor: "pointer" }} />
         <div className="cartIcon" onClick={() => setOpen(!open)}>
           <ShoppingCartIcon />
           <span className="span">{cartItems.length}</span>

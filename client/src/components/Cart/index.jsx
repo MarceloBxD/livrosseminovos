@@ -45,10 +45,11 @@ export default function Cart() {
 
   return (
     <div className="cart">
-      <h1 className="cartTitle">Items adicionados ao carrinho</h1>
       <div className="items">
         {cartItems?.map((item) => (
           <div key={item.id} className="item">
+            <h1 className="cartTitle">Itens adicionados ao carrinho</h1>
+
             <img src={item.img} alt="" />
             <div className="details">
               <h1 className="bookTitle">{item.title}</h1>
