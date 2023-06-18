@@ -1,5 +1,3 @@
-"use strict";
-
 // This is your test secret API key.
 const stripe = require("stripe")(process.env.STRIPE_KEY);
 
@@ -12,7 +10,7 @@ const { createCoreController } = require("@strapi/strapi").factories;
 module.exports = createCoreController("api::order.order", ({ strapi }) => ({
   async create(ctx) {
     const { products } = ctx.request.body;
-    console.log(products);
+    // console.log(products);
 
     // Caso de erro, há possibilidade de estar nessa parte do código (verificar vídeo)
     const lineItems = await Promise.all(
@@ -49,9 +47,9 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
         payment_method_types: ["card"],
       });
 
-      console.log(session)
+      // console.log(session);
 
-      await strapi.service("api::order:order").create({
+      await strapi.service("api::order.order").create({
         data: {
           products,
           stripeId: session.id,
