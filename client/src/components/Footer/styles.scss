@@ -1,12 +1,14 @@
 .footer {
   padding: 0 50px;
+  max-width: 100vw;
+  width: 100%;
 
   .top {
     display: flex;
     margin-top: 100px;
 
     .left-footer {
-      flex: 2;
+      flex: 3;
       display: flex;
       gap: 100px;
 
@@ -65,11 +67,6 @@
     }
   }
   .bottom {
-    margin-top: 80px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
     .editoras {
       display: flex;
       width: 100%;
@@ -94,6 +91,11 @@
         width: 100%;
         font-size: 14px;
         margin-bottom: 20px;
+      }
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 20px;
       }
     }
   }

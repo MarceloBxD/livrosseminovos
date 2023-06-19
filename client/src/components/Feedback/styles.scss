@@ -1,0 +1,59 @@
+.feedbackSection {
+  display: flex;
+  max-width: 100vw;
+  width: 100%;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+
+  .feedbackContainer {
+    max-width: 100vw;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    .feedbackItem {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 25%;
+      height: 100%;
+      border-radius: 5px;
+      margin: 0 10px;
+      padding: 0 10px;
+
+      .feedbackImg {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+        background-position: center;
+        background-size: cover;
+        margin-bottom: 10px;
+      }
+
+      .feedbackItemName {
+        font-size: 24px;
+
+        font-weight: 600;
+        color: #000;
+        margin-bottom: 10px;
+
+        @media (max-width: 768px) {
+          font-size: 20px;
+          text-align: center;
+        }
+      }
+
+      .feedbackItemDescription {
+        font-size: 17px;
+        color: #555;
+        text-align: center;
+        font-weight: 500;
+      }
+    }
+  }
+}
