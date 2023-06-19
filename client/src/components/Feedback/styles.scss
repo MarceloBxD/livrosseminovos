@@ -55,4 +55,10 @@
       }
     }
   }
+
+  @media (max-width: 768px) {
+    align-items: center;
+    margin-top: 0;
+    gap: 30px;
+  }
 }

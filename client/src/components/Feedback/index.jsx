@@ -37,7 +37,7 @@ export default function Feedback() {
   return (
     <div className="feedbackSection">
       <h1 className="mainTitle">Avaliações</h1>
-      <div className="feedbackContainer" data-aos="zoom-out-up">
+      <div className="feedbackContainer" data-aos="zoom-out-down">
         {feedbacks.map((item) => (
           <div className="feedbackItem" key={item.id}>
             <img className="feedbackImg" src={item.img} alt="" />
