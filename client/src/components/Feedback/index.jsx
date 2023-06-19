@@ -1,6 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./styles.scss";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 export default function Feedback() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      delay: 200,
+    });
+  }, []);
   const feedbacks = [
     {
       id: 1,
@@ -26,7 +37,7 @@ export default function Feedback() {
   return (
     <div className="feedbackSection">
       <h1 className="mainTitle">Avaliações</h1>
-      <div className="feedbackContainer">
+      <div className="feedbackContainer" data-aos="zoom-out-up">
         {feedbacks.map((item) => (
           <div className="feedbackItem" key={item.id}>
             <img className="feedbackImg" src={item.img} alt="" />
